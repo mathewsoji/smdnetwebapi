@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mathewsojismdnetwebapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mathewsojismdnetwebapi
+  template:
+    metadata:
+      labels:
+        app: mathewsojismdnetwebapi 
+    spec:
+      containers:
+        - name: mathewsojismdnetwebapi 
+          image: smwebapicontainerregistry.azurecr.io/mathewsojismdnetwebapi
+          ports:
+          - containerPort: 5000
